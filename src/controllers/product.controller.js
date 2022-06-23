@@ -5,6 +5,7 @@ const router= express.Router();
 //get router
 router.get("",async(req,res)=>{
     try {
+        // pagination variables
         const page= req.query.page||1
         const size= req.query.size||10
         const query={category:req.query.search}
@@ -20,6 +21,7 @@ router.get("",async(req,res)=>{
       
           return res.send({ products, totalPages });
         }
+        // if there is no query params then simply returing whole data from product collection
         const products= await Product.find().lean().exec();
         return res.status(200).send(products)
        
