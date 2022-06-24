@@ -11,3 +11,5 @@ b. if we provide search query parameter while requesting through api like  (http
 And we can also specify page and size in request like (https://grovetech-backend.herokuapp.com/v1/products?search=category-name&page=2&size=20).
 
 Note: category name must be without quotes like https://grovetech-backend.herokuapp.com/v1/products?search=apparel else it will return empty data
+
+#If we want to run this in local machine so run command in terminal  "npm run server " and then follow the given localhost url and check it from postman easily
